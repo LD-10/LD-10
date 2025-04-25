@@ -1,0 +1,88 @@
+/* styles.css */
+
+/* 1. RESET minimal pour uniformiser les navigateurs */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Police et fond généraux */
+html {
+    font-family: system-ui, sans-serif; /* police système pour performance */ 
+    line-height: 1.5;
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* 3. Mise en page du conteneur principal */
+.container {
+    width: min(90%, 1200px);
+    margin-inline: auto; /* centrage horizontal */ 
+}
+
+/* 4. En-tête fixe et navigation */
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+nav ul {
+    display: flex;            /* Flexbox pour aligner les liens */ :contentReference[oaicite:0]{index=0}
+    list-style: none;
+    gap: 1rem;
+}
+nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 1rem 0;
+    display: block;
+}
+nav a:hover {
+    color: #007acc;
+}
+
+/* 5. Titres et intros */
+h1, h2, h3 {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+.intro {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+/* 6. Liste de projets */
+.project-list {
+    list-style: none;
+    display: grid;            /* Grid pour plusieurs colonnes */ :contentReference[oaicite:1]{index=1}
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem 0;
+}
+.project-list a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* 7. Pied de page */
+footer {
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.875rem;
+}
+
+/* 8. Responsive utilities (exemple) */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;  /* Flex-direction pour mobile */ :contentReference[oaicite:2]{index=2}
+    }
+}
